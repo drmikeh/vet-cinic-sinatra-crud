@@ -1,0 +1,14 @@
+<section class="owners">
+  <h2>There are <%= @owners.length %> Owners</h2>
+  <ul>
+    <% @owners.each do |owner| %>
+      <li><a href="/owners/<%= owner.id %>"><%= owner.to_s %></a></li>
+    <% end %>
+  </ul>
+  <br>
+
+  <a href="/owners/new"><button class="btn btn-success">Add a new Owner</button></a>
+  <br><br>
+
+  <a href="/"><button class="btn btn-primary">Home</button></a>
+</section>

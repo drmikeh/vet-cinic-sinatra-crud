@@ -1,0 +1,14 @@
+<section class="pets">
+  <h2>There are <%= @pets.length %> Pets</h2>
+  <ul>
+    <% @pets.each do |pet| %>
+      <li><%= pet.to_s %></li>
+    <% end %>
+  </ul>
+  <br>
+
+  <a href="/pets/new"><button class="btn btn-success">Add a new Pet</button></a>
+  <br><br>
+
+  <a href="/"><button class="btn btn-primary">Home</button></a>
+</section>
