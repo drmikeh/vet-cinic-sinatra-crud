@@ -35,6 +35,11 @@ post '/owners' do
   redirect '/owners'
 end
 
+delete '/owners/:id' do
+  Owner.destroy(params[:id])
+  redirect '/owners'
+end
+
 get '/pets' do
   @pets = Pet.all
   erb :pets
