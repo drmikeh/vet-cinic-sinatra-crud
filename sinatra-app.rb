@@ -32,14 +32,14 @@ get '/owners' do
   erb :owners
 end
 
+get '/owners/new' do
+  erb "new-owner".to_sym
+end
+
 get '/owners/:id' do
   id = params[:id]
   @owner = Owner.find(id)
   erb :owner
-end
-
-get '/owners/new' do
-  erb "new-owner".to_sym
 end
 
 post '/owners' do
