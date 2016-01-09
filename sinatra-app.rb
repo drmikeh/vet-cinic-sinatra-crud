@@ -11,18 +11,6 @@ ActiveRecord::Base.establish_connection(
   # password: 'your_password'
 )
 
-helpers do
-  def pluralize(noun, count)
-    count == 1 ? noun : noun + 's'
-  end
-end
-
-set :show_exceptions, :after_handler
-
-error do
-  'Sorry there was a nasty error - ' + env['sinatra.error'].message
-end
-
 get '/' do
   erb :home
 end
@@ -37,8 +25,7 @@ get '/owners/new' do
 end
 
 get '/owners/:id' do
-  id = params[:id]
-  @owner = Owner.find(id)
+  @owner = Owner.find(params[:id])
   erb :owner
 end
 
@@ -61,6 +48,10 @@ end
 post '/pets' do
   puts "got params = #{params}"
   Pet.create(params[:pet])
-  # raise RuntimeError.new("boom")
+  redirect '/pets'
+end
+
+delete '/pets/:id' do
+  Pet.destroy(params[:id])
   redirect '/pets'
 end
