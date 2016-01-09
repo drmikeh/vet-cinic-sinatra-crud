@@ -11,7 +11,16 @@ This is a simple Sinatra app to manage a set of pets and pet owners. It is inten
 * CSS
 * Twitter Bootstrap CSS
 
-## TODO:
+## How to Run
+
+* Use the scripts in the `db` directory to create and populate a `vet-clinic` database.
+* Use shotgun to run it:
+
+```
+shotgun sinatra-app.rb
+```
+
+## TODOs
 
 * Add the following features:
   - Update an owner (PUT /owners/:id) or a pet (PUT /pets/:id)
