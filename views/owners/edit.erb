@@ -1,0 +1,19 @@
+<section class="new-owner">
+  <h1>Edit <%= @owner.full_name %></h1>
+
+  <form action="/owners/<%= @owner.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    First name:<br>
+    <input type="text" name="owner[first_name]" value="<%= @owner.first_name %>">
+    <br>
+
+    Last name:<br>
+    <input type="text" name="owner[last_name]" value="<%= @owner.last_name %>">
+    <br><br>
+
+    <input type="submit" class="btn btn-success" value="Submit">
+  </form>
+
+  <a href="/owners"><button class="btn btn-warning">Cancel</button></a>
+</section>

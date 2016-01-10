@@ -3,9 +3,12 @@
   <ul>
     <% @owners.each do |owner| %>
       <li><a href="/owners/<%= owner.id %>"><%= owner.to_s %></a></li>
+
+      <a href="/owners/<%= owner.id %>/edit"><button class="btn btn-warning">Edit</button></a>
+
       <form method="post" action="/owners/<%= owner.id %>">
         <input type="hidden" name="_method" value="delete">
-        <button type="submit">Delete</button>
+        <button class="btn btn-danger" type="submit">Delete</button>
       </form>
     <% end %>
   </ul>

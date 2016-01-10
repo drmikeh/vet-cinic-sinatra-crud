@@ -5,7 +5,7 @@
       <li><%= pet.to_s %></li>
       <form method="post" action="/pets/<%= pet.id %>">
         <input type="hidden" name="_method" value="delete">
-        <button type="submit">Delete</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
       </form>
     <% end %>
   </ul>
