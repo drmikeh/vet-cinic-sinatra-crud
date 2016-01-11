@@ -11,6 +11,12 @@ ActiveRecord::Base.establish_connection(
   # password: 'your_password'
 )
 
+helpers do
+  def get_selected(pet, owner)
+    pet.owner.id == owner.id ? 'selected' : ''
+  end
+end
+
 # Return the home page
 get '/' do
   erb :home

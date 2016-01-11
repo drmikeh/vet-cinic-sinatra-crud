@@ -19,7 +19,7 @@
     Owner:<br>
     <select name="pet[owner_id]">
       <% @owners.each do |owner| %>
-        <option value="<%= owner.id %>" <%= owner.id == @pet.owner.id ? 'selected' : '' %>><%= owner.full_name %></option>
+        <option value="<%= owner.id %>" <%= get_selected(@pet, owner) %>><%= owner.full_name %></option>
       <% end %>
     </select>
     <br><br>
