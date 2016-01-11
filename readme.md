@@ -23,3 +23,7 @@ shotgun sinatra-app.rb
 ## TODOs
 
 * Improve the UI
+
+## References
+
+* [Using Put and Delete in Sinatra](http://mikeebert.tumblr.com/post/26877173686/quick-tip-using-put-and-delete-in-sinatra)
