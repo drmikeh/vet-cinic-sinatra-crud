@@ -36,7 +36,7 @@ end
 # Return the detail page for the specified owner
 get '/owners/:id' do
   @owner = Owner.find(params[:id])
-  erb "owners/view".to_sym
+  erb "owners/show".to_sym
 end
 
 # Create a new owner (called from the new owner page)
@@ -80,7 +80,7 @@ end
 # Return the detail page for the specified pet
 get '/pets/:id' do
   @pet = Pet.find(params[:id])
-  erb "pets/view".to_sym
+  erb "pets/show".to_sym
 end
 
 # Create a new pet (called from the new pet page)

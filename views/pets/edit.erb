@@ -9,7 +9,11 @@
     <br>
 
     Type:<br>
-    <input type="text" name="pet[type]" value="<%= @pet.type %>">
+    <select name="pet[type]">
+      <option value="Dog" <%= @pet.type == 'Dog' ? 'selected' : '' %>>Dog</option>
+      <option value="Cat" <%= @pet.type == 'Cat' ? 'selected' : '' %>>Cat</option>
+      <option value="Bird" <%= @pet.type == 'Bird' ? 'selected' : '' %>>Bird</option>
+    </select>
     <br>
 
     Age:<br>

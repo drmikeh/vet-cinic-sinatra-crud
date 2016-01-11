@@ -1,0 +1,10 @@
+<section class="pet">
+  <h2><%= @pet.name %></h2>
+
+  <p>Type: <%= @pet.type %></p>
+  <p>Age: <%= @pet.age %></p>
+  <p>Owner: <%= @pet.owner.full_name %></p>
+
+  <a href="/pets/<%= @pet.id %>/edit"><button class="btn btn-warning">Edit</button></a>
+  <a href="/pets"><button class="btn btn-primary">Back to Pets</button></a>
+</section>
