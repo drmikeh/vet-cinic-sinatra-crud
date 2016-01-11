@@ -84,6 +84,20 @@ post '/pets' do
   redirect '/pets'
 end
 
+# Return the form for editing the specified pet
+get '/pets/:id/edit' do
+  @owners = Owner.all
+  @pet = Pet.find(params[:id])
+  erb "pets/edit".to_sym
+end
+
+# Update the specified pet (called from the edit page)
+put '/pets/:id' do
+  pet = Pet.find(params[:id])
+  pet.update(params[:pet])
+  redirect '/pets'
+end
+
 # Delete the specified pet
 delete '/pets/:id' do
   Pet.destroy(params[:id])

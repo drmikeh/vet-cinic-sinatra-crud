@@ -22,6 +22,4 @@ shotgun sinatra-app.rb
 
 ## TODOs
 
-* Add the following features:
-  - Update an owner (PUT /owners/:id) or a pet (PUT /pets/:id)
-  - Delete an owner (DELETE /owners/:id) or a pet (DELETE /pets/:id)
+* Improve the UI

@@ -1,0 +1,31 @@
+<section class="new-pet">
+  <h1>Edit Pet</h1>
+
+  <form action="/pets/<%= @pet.id %>" method="post">
+    <input type="hidden" name="_method" value="put">
+
+    Name:<br>
+    <input type="text" name="pet[name]" value="<%= @pet.name %>">
+    <br>
+
+    Type:<br>
+    <input type="text" name="pet[type]" value="<%= @pet.type %>">
+    <br>
+
+    Age:<br>
+    <input type="number" name="pet[age]" value="<%= @pet.age %>">
+    <br>
+
+    Owner:<br>
+    <select name="pet[owner_id]">
+      <% @owners.each do |owner| %>
+        <option value="<%= owner.id %>" <%= owner.id == @pet.owner.id ? 'selected' : '' %>><%= owner.full_name %></option>
+      <% end %>
+    </select>
+    <br><br>
+
+    <input class="btn btn-success" type="submit" value="Submit">
+  </form>
+
+  <a href="/pets"><button class="btn btn-warning">Cancel</button></a>
+</section>
